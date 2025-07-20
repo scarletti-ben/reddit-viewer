@@ -43,7 +43,7 @@ const main = /** @type {HTMLDivElement} */
 (async () => {
 
     // Request data from URL and convert to JSON
-    const path = `data/cats.json`;
+    const path = `data/test.json`;
     const response = await fetch(path);
 
     /** @type {responseObject} */
