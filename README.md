@@ -1,5 +1,5 @@
 # Reddit Post Viewer
-This `README` is a work in progress.
+This `README` is a work in progress. Currently there is no external functionality, so as to avoid making excessive `fetch` calls to `Reddit` while in development. The file `data/test.json` is used for local testing, but has not been added to the repository as it contains post data that is owned by the original `Reddit` posters involved.
 
 # Project Metadata
 ```yaml
