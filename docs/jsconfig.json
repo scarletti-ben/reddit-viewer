@@ -2,7 +2,13 @@
     "compilerOptions": {
         "checkJs": true,
         "target": "es2017",
-        "typeRoots": ["./types"]
+        "lib": [
+            "DOM",
+            "ES2022"
+        ],
+        "typeRoots": [
+            "./types"
+        ]
     },
     "include": [
         "./"
