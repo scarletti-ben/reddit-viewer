@@ -379,6 +379,7 @@ export class RedditPost extends HTMLElement {
                 const videoLink = videoInfo.fallback_url;
                 video.src = videoLink;
                 video.controls = false;
+                // video.preload = "metadata";
                 // video.muted = false;
                 // video.volume = 0.5;
                 video.addEventListener('click', () => {
@@ -395,14 +396,13 @@ export class RedditPost extends HTMLElement {
                 const imageUrl = imageInfo.resolutions?.[imageInfo.resolutions.length - 1]?.url || imageInfo.source?.url;
                 if (imageUrl) {
                     img.src = decodeString(imageUrl);
-                    img.alt = data.title || 'Reddit post image';
+                    img.alt = data.title || 'Missing image';
                     post._mediaContainer.appendChild(img);
                     hasMedia = true;
                 }
             }
         }
 
-        // Remove the media container if needed
         if (!hasMedia) post._mediaContainer.remove();
 
         post._text.textContent = decodeString(data.selftext);
